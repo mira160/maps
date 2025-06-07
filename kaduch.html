@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom JSON Data</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "https://cogisdemo.dataeast.com/elitegis/rest/services/solutions_cadastre/cadastre/MapServer/30?f=json",
+        success: function(response) {
+            // Меняем значение одного из ключей
+            if (response.someKey === ',"extent":{"xmin":35.30578462024513,"ymin":38.88859879112621,"xmax":131.12876811119634,"ymax":57.2378353466337,"spatialReference":{"wkid":4326,"latestWkid":4326}},') {
+                response.someKey = ',';
+            }
+            
+            document.write(JSON.stringify(response));
+        },
+        error: function(error) {
+            alert("Ошибка при получении данных.");
+        }
+    });
+});
+</script>
+</body>
+</html>
