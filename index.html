@@ -197,6 +197,16 @@
   <script type="text/javascript" src="browser-message/limited-unsupported-browser.js"></script>
   <script type="text/javascript" src="simpleLoader.js"></script>
   <script type="text/javascript" src="init.js"></script>
+  <script src="./widgets/SidePopupPositioner/Widget.js"></script>
+
+<script>
+  require(['widgets/SidePopupPositioner/Widget'], function(SidePopupPositioner){
+    new SidePopupPositioner({
+      mapView: mapViewInstance
+    }).startup();
+  });
+</script>
+
 </body>
 
 </html>
