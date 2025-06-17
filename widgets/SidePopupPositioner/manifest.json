@@ -1,0 +1,9 @@
+{
+  "name": "SidePopupPositioner",
+  "version": "1.0",
+  "author": "Ваше имя",
+  "description": "Позволяет выводить окно pop-up сбоку карты.",
+  "license": "",
+  "category": "UI Enhancements",
+  "iconClass": ""
+}
